@@ -1,0 +1,93 @@
+004-005 @READ_PROGRAM_MEMORY8.P1
+004     @WRITE_PROGRAM_MEMORY8.P2
+015-016 CCP_1
+015     CCP_1_LOW
+016     CCP_1_HIGH
+01B-01C CCP_2
+01B     CCP_2_LOW
+01C     CCP_2_HIGH
+020-021 GIA_TRI
+022     lcd_init.i
+022     MAIN.@SCRATCH1
+023-024 @PRINTF_LU_209.P1
+023     lcd_init.@SCRATCH1
+025     @PRINTF_LU_209.@SCRATCH1
+026     @PRINTF_LU_209.@SCRATCH2
+027     @PRINTF_LU_209.@SCRATCH3
+028     @PRINTF_LU_209.@SCRATCH4
+029     @PRINTF_LU_209.@SCRATCH5
+02A     @PRINTF_LU_209.@SCRATCH6
+02B     @PRINTF_LU_209.@SCRATCH7
+02C     lcd_putc.c
+02D     lcd_gotoxy.x
+02D     @delay_ms2.P1
+02E     lcd_gotoxy.y
+02F     lcd_gotoxy.address
+030     lcd_gotoxy.@SCRATCH1
+031     lcd_send_byte.address
+032     lcd_send_byte.n
+033     lcd_read_byte.low
+033     lcd_send_byte.@SCRATCH1
+034     lcd_read_byte.high
+034     lcd_send_nibble.n
+035     lcd_read_nibble.n
+035     lcd_read_byte.@SCRATCH1
+036     lcd_read_nibble.@SCRATCH1
+077     @SCRATCH
+078     @SCRATCH
+078     _RETURN_
+079     @SCRATCH
+07A     @SCRATCH
+07B     @SCRATCH
+107.6   C1OUT
+108.6   C2OUT
+10D-10E @WRITE_PROGRAM_MEMORY8.P1
+10D-10E @READ_PROGRAM_MEMORY8.P2
+
+ROM Allocation:
+0032  @delay_ms2
+0004  LCD_INIT_STRING
+00FA  lcd_init
+00A6  lcd_read_byte
+0072  lcd_read_nibble
+00A3  lcd_send_byte
+0047  lcd_send_nibble
+0134  lcd_gotoxy
+0157  lcd_putc
+01DF  MAIN
+000C  @const222
+0018  @const223
+017C  @PRINTF_LU_209
+0025  @const226
+01DF  @cinit
+
+Project Directory:
+    D:\Microprocess System\week_5-ADC\
+
+Project Files:
+    ADC.c
+    C:\Program Files (x86)\PICC\devices\16f887.h
+    C:\Program Files (x86)\PICC\drivers\lcd.h
+    C:\Program Files (x86)\PICC\drivers\math.h
+
+Units:
+    ADC.c (main)
+
+Compiler Settings:
+    Processor:      PIC16F887
+    Pointer Size:   16
+    ADC Range:      0-1023
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+
+Output Files:
+    Errors:      ADC.err
+    Ext Symbols: ADC.esym
+    INHX8:       ADC.hex
+    Symbols:     ADC.sym
+    List:        ADC.lst
+    Debug/COFF:  ADC.cof
+    Project:     ADC.PJT
+    Call Tree:   ADC.tre
+    Statistics:  ADC.sta
